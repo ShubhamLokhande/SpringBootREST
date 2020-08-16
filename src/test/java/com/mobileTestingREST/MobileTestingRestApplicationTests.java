@@ -1,4 +1,4 @@
-package com.tilesdemo;
+package com.mobileTestingREST;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

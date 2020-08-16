@@ -1,8 +1,8 @@
-package com.tilesdemo.repository;
+package com.mobileTestingREST.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.tilesdemo.entity.User;
+import com.mobileTestingREST.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long>{
 

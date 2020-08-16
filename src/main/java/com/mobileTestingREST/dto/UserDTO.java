@@ -1,4 +1,4 @@
-package com.tilesdemo.dto;
+package com.mobileTestingREST.dto;
 
 import java.io.Serializable;
 
@@ -11,7 +11,15 @@ public class UserDTO implements Serializable{
 	private String email;
 	private String password;
 	private String address;
+	private String avatar;
+	private String passwordConfirm;
 	
+	public String getAvatar() {
+		return avatar;
+	}
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
 	public long getUserId() {
 		return userId;
 	}

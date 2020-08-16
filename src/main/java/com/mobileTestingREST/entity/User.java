@@ -1,4 +1,4 @@
-package com.tilesdemo.entity;
+package com.mobileTestingREST.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,6 +28,15 @@ public class User {
 	@Column(name = "USER_ADDRESS", nullable = false)
 	private String address;
 	
+	@Column(name = "USER_AVATAR", nullable = true)
+	private String avatar;
+	
+	public String getAvatar() {
+		return avatar;
+	}
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
 	public long getUserId() {
 		return userId;
 	}
@@ -55,6 +64,11 @@ public class User {
 	}
 	public String getAddress() {
 		return address;
+	}
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", password=" + password
+				+ ", address=" + address + ", avatar=" + avatar + "]";
 	}
 	public void setAddress(String address) {
 		this.address = address;

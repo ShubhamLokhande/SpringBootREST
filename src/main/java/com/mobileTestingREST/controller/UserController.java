@@ -1,4 +1,4 @@
-package com.tilesdemo.controller;
+package com.mobileTestingREST.controller;
 
 import java.util.List;
 
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tilesdemo.dto.UserDTO;
-import com.tilesdemo.dtoMapper.UserDTOMapper;
-import com.tilesdemo.entity.User;
-import com.tilesdemo.service.UserService;
+import com.mobileTestingREST.dto.UserDTO;
+import com.mobileTestingREST.dtoMapper.UserDTOMapper;
+import com.mobileTestingREST.entity.User;
+import com.mobileTestingREST.service.UserService;
 
 @RestController
 @RequestMapping("/user")
@@ -50,4 +50,12 @@ public class UserController {
 	public void deleteUser(@PathVariable(value = "id") long id) {
 		userService.deleteUserById(id);
 	}
+	
+//	Login
+	@PostMapping(path = "/login")
+	public User loginUser(@RequestBody UserDTO userDTO) {
+		User user = UserDTOMapper.mapToUser(userDTO);
+		return userService.loginUser(user);
+	}
+
 }

@@ -1,4 +1,4 @@
-package com.tilesdemo;
+package com.mobileTestingREST;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
